@@ -5,5 +5,3 @@
 def solve_me_first(a, b)
   return a + b
 end
-
-puts solve_me_first(5, 5)
