@@ -1,4 +1,4 @@
-require './Data-Structures/kangaroo'
+require './Data-Structures/Implementation/kangaroo'
 
 describe '#kangaroo' do
   it 'should return YES' do

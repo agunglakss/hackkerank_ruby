@@ -1,4 +1,4 @@
-require './Data-Structures/simple_array_sum'
+require './Data-Structures/Warmup/simple_array_sum'
 
 describe "#simple_array_sum" do
   it 'should be equal 31' do

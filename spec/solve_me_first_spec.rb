@@ -1,4 +1,4 @@
-require './Data-Structures/solve_me_first'
+require './Data-Structures/Warmup/solve_me_first'
 
 describe "#solve_me_first" do
   it 'result the sum must be equal 4' do

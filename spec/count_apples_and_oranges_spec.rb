@@ -1,4 +1,4 @@
-require './Data-Structures/count_apples_and_oranges'
+require './Data-Structures/Implementation/count_apples_and_oranges'
 
 describe '#count_apples_and_oranges' do
   it 'return total apple and orange' do
