@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install Ruby
-      run: sudo apt update && sudo apt install -y ruby${{ matrix.ruby-version }}
+      run: sudo apt update && sudo apt install -y ruby-full
     - name: check ruby version
       run: ruby -v
     - name: Install dependencies
