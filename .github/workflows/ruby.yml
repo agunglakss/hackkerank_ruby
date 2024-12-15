@@ -19,7 +19,7 @@ jobs:
     - uses: actions/setup-ruby@v1
       with:
         ruby-version: ${{ matrix.ruby-version }}
-        cache: bundler
+        bundler-cache: true
     # - name: Install Ruby
     #   run: sudo apt update && sudo apt install -y ruby-full
     - name: Check ruby version
