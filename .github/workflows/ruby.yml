@@ -10,23 +10,25 @@ permissions:
 
 jobs:
   test:
-
     runs-on: ubuntu-24.04
     strategy:
       matrix:
         ruby-version: ['3.1.2']
-
     steps:
     - uses: actions/checkout@v4
-    - name: Install Ruby
-      run: sudo apt update && sudo apt install -y ruby-full
+    - uses: actions/setup-ruby@v4
+      with:
+        ruby-version: ${{ matrix.ruby-version }}
+        cache: bundler
+    # - name: Install Ruby
+    #   run: sudo apt update && sudo apt install -y ruby-full
     - name: Check ruby version
       run: ruby -v
-    - name: Install Bundler
-      run: sudo gem install bundler
-    - name: Install RSpec
-      run: sudo gem install rspec
-    - name: Install dependencies
-      run: bundle install
+    # - name: Install Bundler
+    #   run: sudo gem install bundler
+    # - name: Install RSpec
+    #   run: sudo gem install rspec
+    # - name: Install dependencies
+    #   run: bundle install
     - name: Run tests
       run: rspec ./spec
